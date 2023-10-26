@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Destino de viagem
+    <input id="destino_input">
+
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="primeiraV()">Primeira viagem</button>
+    <button onclick="terceiraV()">Terceira Viagem</button>
+    <button onclick="ultimaV()">Última viagem</button>
+
+    <div id="destino"></div>
+
+</body>
+<script>
+    var listaV = []
+    function adicionar(){
+        var destino =  destino_input.value;
+        listaV.push(destino);
+
+
+    }
+    function primeiraV(){
+        var destino = destino_input.value;
+
+     if(destino == listaV.length [1]){
+        destino.innerHTML +=` `
+
+     }
+            }
+            
+        
+        
+    
+</script>
+</html>

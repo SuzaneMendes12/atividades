@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome da fruta
+    <input id="nomeFruta_input">
+
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="lista"></div>
+</body>
+<script>
+    var PesqFruta = [] 
+
+    function pesquisar(){
+        var fruta = nomeFruta_input.value;
+        PesqFruta.push(fruta);
+        lista.innerHTML=``
+
+        for(var repeticao = 0; repeticao <= PesqFruta.length; repeticao +=1){
+            if(fruta == "maça" || fruta =="banana"||fruta == "laranja"){
+                lista.innerHTML += `A fruta ${fruta} existe na lista<br>`
+            }else{ 
+                lista.innerHTML +=`Não existe a fruta ${fruta} na lista<br>`
+
+            }
+            break
+        }
+
+        
+
+    }
+
+</script>
+</html>

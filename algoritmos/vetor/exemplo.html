@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite uma fruta:
+    <input id="input_fruta"><br>
+    <button onclick="adicionarFruta()">
+        Adicionar a lista
+    </button>
+    <button onclick="verListaFrutas()">
+        Ver lista inteira
+    </button>
+    <div id="div_frutas"></div>
+</body>
+</html>
+
+<script>
+    var listaFrutas = [];
+    function adicionarFruta() {
+        var fruta = input_fruta.value;
+        listaFrutas.push(fruta);
+    }
+
+    function verListaFrutas() {
+        div_frutas.innerHTML = "";
+        for (var posicao = 0;
+            posicao < listaFrutas.length; posicao += 1) {
+                if (posicao % 2 == 0) {
+                    div_frutas.innerHTML += `
+                        É PAR - ${listaFrutas[posicao]}<br>
+                    `;
+                } else {
+                    div_frutas.innerHTML += `${listaFrutas[posicao]}<br>`;
+                }
+                
+        }
+    }
+</script>

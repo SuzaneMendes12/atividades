@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite uma fruta:
+    <input type="text" id="fruta_input">
+
+    <button onclick="adicionar()">adicionar a lista</button>
+    <button onclick="verLista()">VER LISTA INTEIRA</button>
+    <div id="mostrarF"></div>
+
+</body>
+<script>
+
+    var listaFruta = [];
+    function adicionar() {
+
+        var fruta = fruta_input.value;
+        listaFruta.push(fruta);
+
+    }
+    function verLista() {
+        for (var posicao = 0; posicao < listaFruta.length; posicao += 1) {
+            mostrarF.innerHTML += `${listaFruta [posicao]}<br>`
+
+        }
+    }
+</script>
+
+</html>
