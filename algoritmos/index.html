@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Campo Minado SPTECH</h1><br><br>
+    Tipo de campo: 
+    <select name="" id="campos">
+    <option value="2">2x2</option>
+    <option value="4">4x4</option>
+    <option value="6">6x6</option>
+</select>
+    <Button onclick="novoJogo()">
+        Novo Jogo
+    </Button>
+    <div id="result">
+        Minas: <br>
+        Explosões: <br>
+        Pontos: <br>
+    </div>
+    <div id="frase"></div>
+    <div class="divQuadrado" id="interroga"><img src="iconmonstr-help-1-240.png" alt=""></div>
+    <style>
+        .divQuadrado {
+            display: flex;
+            width: 5%;
+            border: 4px black solid;
+            border-radius: 14px;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+        }
+
+        .divQuadrado img {
+            width: 50%;
+        }
+    </style>
+
+</body>
+</html>
+
+<script>
+    var lista = [];
+    function novoJogo(){
+     var interrogacao = interroga.value
+        var select = campos.value;
+         frase.innerHTML ='';
+
+
+       if(select == "2"){
+        for(var repeticao = 1; repeticao <= select; repeticao ++) {
+            if(repeticao % 2 == 0) {
+                frase.innerHTML += `<br>`
+            }else {
+            frase.innerHTML += getElementebyID('interroga')
+            frase.innerHTML += `<img style="width: 100px"src="stop.png" alt=""><br>`
+            frase.innerHTML += `<img style="width: 100px"src="stop.png" alt="">`
+            frase.innerHTML += `<img style="width: 100px"src="stop.png" alt="">` 
+            }
+            
+            
+            }
+        
+       }else if(select == "4"){
+        for(var repeticao = 1; repeticao <= select; repeticao ++) {
+            if(repeticao % 2 == 0){
+                frase.innerHTML+=`<br>`
+            }else{
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png"><br>`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+            }
+                
+            
+
+        }
+       }else if(select == "6"){
+        for(var repeticao = 1; repeticao <= select; repeticao ++) {
+            if(repeticao % 2 == 0) {
+                frase.innerHTML += `<br>`
+            } else {
+                 frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png"><br>`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`   
+                frase.innerHTML += `<img style="width: 100px"src="stop.png">`
+            }
+           
+            
+            
+            
+
+        }
+       }
+
+
+       
+
+    }
+</script>
